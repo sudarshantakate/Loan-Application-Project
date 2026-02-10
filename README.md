@@ -8,7 +8,3 @@ Loan Application Management System built using Spring Boot, Hibernate, and MySQL
 - Loan processing
 - REST APIs
 - Database integration
-
-## Author
-
-Sudarshan Takate
