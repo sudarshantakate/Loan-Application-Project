@@ -1,0 +1,5 @@
+package com.ltifinance.loanapp.customerservice.repository;
+
+public interface Repository {
+
+}

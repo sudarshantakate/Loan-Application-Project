@@ -1,0 +1,11 @@
+package com.ltifinance.loanapp.customerservice.entity;
+
+import javax.persistence.Entity;
+
+@Entity
+public class LogIn {
+
+	private String username;
+	
+	private String password;
+}

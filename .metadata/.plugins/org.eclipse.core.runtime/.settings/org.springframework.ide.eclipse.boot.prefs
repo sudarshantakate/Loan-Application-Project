@@ -1,0 +1,17 @@
+eclipse.preferences.version=1
+org.springframework.ide.eclipse.boot.wizard.PopularityTracker.cloud-eureka-server=2
+org.springframework.ide.eclipse.boot.wizard.PopularityTracker.data-jpa=3
+org.springframework.ide.eclipse.boot.wizard.PopularityTracker.devtools=3
+org.springframework.ide.eclipse.boot.wizard.PopularityTracker.lombok=3
+org.springframework.ide.eclipse.boot.wizard.PreferredSelections.artifactId=CustomerService
+org.springframework.ide.eclipse.boot.wizard.PreferredSelections.bootVersion=4.0.2.RELEASE
+org.springframework.ide.eclipse.boot.wizard.PreferredSelections.description=Microservice for managing customer operations in the Loan Application platform
+org.springframework.ide.eclipse.boot.wizard.PreferredSelections.groupId=com.ltifinance.loanapp
+org.springframework.ide.eclipse.boot.wizard.PreferredSelections.javaVersion=17
+org.springframework.ide.eclipse.boot.wizard.PreferredSelections.language=java
+org.springframework.ide.eclipse.boot.wizard.PreferredSelections.name=CustomerService
+org.springframework.ide.eclipse.boot.wizard.PreferredSelections.packageName=com.ltifinance.loanapp.customerservice
+org.springframework.ide.eclipse.boot.wizard.PreferredSelections.packaging=war
+org.springframework.ide.eclipse.boot.wizard.PreferredSelections.type=MAVEN
+org.springframework.ide.eclipse.boot.wizard.PreferredSelections.version=0.0.1-SNAPSHOT
+org.springframework.ide.eclipse.boot.wizard.initializr.url=https\://start.spring.io\n

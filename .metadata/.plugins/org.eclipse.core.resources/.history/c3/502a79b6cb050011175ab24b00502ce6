@@ -1,0 +1,48 @@
+package com.ltifinance.loanapp.customerservice.service;
+
+
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+import org.apache.tomcat.util.bcel.classfile.Constant;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.ltifinance.loanapp.customerservice.constant.EnumData;
+import com.ltifinance.loanapp.customerservice.entity.Customer;
+import com.ltifinance.loanapp.customerservice.repository.CustomerRepository;
+import com.ltifinance.loanapp.customerservice.response.CustomerResponse;
+
+@Service
+public class CustomerServiceImpl implements CustomerService {
+
+	@Autowired
+	private CustomerRepository repo;
+
+	@Override
+	public Customer registerCustomer(Customer customer) {
+		System.out.println("In Service Layer Start");
+		CustomerResponse customerresponse = new CustomerResponse();
+		
+		//set date here 
+		Date date = new Date(System.currentTimeMillis());
+		SimpleDateFormat dateformat = new SimpleDateFormat("DD-MM-YYYY");
+		String strDate = dateformat.format(date);
+		customer.setCreatedDate(strDate);
+		
+		//Set Status
+		customer.setStatus(EnumData.ACTIVE);
+		
+		Customer customer1 = repo.save(customer);
+		if (customer1 != null) {
+			customerresponse.setUsername(customer1.getUsername());
+			customerresponse.setMessage("Customer profile created successfully!!");
+		} else {
+			customerresponse.setMessage("Something wents wrong profile not created!!");
+		}
+		System.out.println("In Service layer End");
+		return null;
+	}
+
+}

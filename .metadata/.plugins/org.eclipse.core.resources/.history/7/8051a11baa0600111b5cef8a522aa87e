@@ -1,0 +1,12 @@
+spring.application.name=notificationService
+
+
+server.port=8001
+
+spring.mail.host=smtp.gmail.com
+spring.mail.port=587
+spring.mail.username=omkalokhe105@gmail.com
+spring.mail.password=sbuurbsddgglxkdw
+
+spring.mail.properties.mail.smtp.auth=true
+spring.mail.properties.mail.smtp.starttls.enable=true
