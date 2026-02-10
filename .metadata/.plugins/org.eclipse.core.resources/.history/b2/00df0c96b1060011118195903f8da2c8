@@ -86,13 +86,25 @@ public class CustomerServiceImpl implements CustomerService {
 		logger.info("In customer impl getting by email end");
 		return new ResponseEntity<CustomerResponse>(customerResponse, HttpStatus.OK);
 	}
-
+	
 	@Override
 	public ResponseEntity<?> getCustomerByUsername(String username) {
 		logger.info("In customer impl getting by username start");
 		Customer customer = repo.findByUsername(username);
 		if (customer != null) {
-			CustomerDto dto = modelMapper.map(customer, CustomerDto.class);
+			CustomerDto dto = new CustomerDto();
+			dto.setFname(customer.getFname());
+			dto.setLname(customer.getLname());
+			dto.setAddress(customer.getAddress());
+			dto.setUsername(customer.getUsername());
+			dto.setEmail(customer.getEmail());
+			dto.setMobileNumber(customer.getMobileNumber());
+			dto.setDob(customer.getDob());
+			dto.setCountry(customer.getCountry());
+			dto.setState(customer.getState());
+			dto.setCity(customer.getCity());
+			dto.setZipcode(customer.getZipcode());
+			dto.setStatus(customer.isStatus());
 			logger.info("Customer found with username: " + username);
 			return new ResponseEntity<CustomerDto>(dto, HttpStatus.OK);
 		}
@@ -105,16 +117,28 @@ public class CustomerServiceImpl implements CustomerService {
 
 	@Override
 	public ResponseEntity<?> getCustomerById(int id) {
-		logger.info("In customer impl getting by id start");
+		logger.info("In customer impl getting by username start");
 		Customer customer = repo.findById(id);
 		if (customer != null) {
-			CustomerDto dto = modelMapper.map(customer, CustomerDto.class);
-			logger.info("Customer found with id: " + id);
+			CustomerDto dto = new CustomerDto();
+			dto.setFname(customer.getFname());
+			dto.setLname(customer.getLname());
+			dto.setAddress(customer.getAddress());
+			dto.setUsername(customer.getUsername());
+			dto.setEmail(customer.getEmail());
+			dto.setMobileNumber(customer.getMobileNumber());
+			dto.setDob(customer.getDob());
+			dto.setCountry(customer.getCountry());
+			dto.setState(customer.getState());
+			dto.setCity(customer.getCity());
+			dto.setZipcode(customer.getZipcode());
+			dto.setStatus(customer.isStatus());
+			logger.info("Customer found with username: " + id);
 			return new ResponseEntity<CustomerDto>(dto, HttpStatus.OK);
 		}
 		CustomerResponse response = new CustomerResponse();
-		response.setMessage("Customer not found with id: " + id);
-		logger.info("Customer not found with id: " + id);
+		response.setMessage("Invalid username");
+		logger.info("Customer not found with username: " + id);
 		return new ResponseEntity<CustomerResponse>(response, HttpStatus.OK);
 	}
 

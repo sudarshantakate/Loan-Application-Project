@@ -105,16 +105,25 @@ public class CustomerServiceImpl implements CustomerService {
 
 	@Override
 	public ResponseEntity<?> getCustomerById(int id) {
+
 		logger.info("In customer impl getting by id start");
-		Customer customer = repo.findById(id);
+
+		Customer customer = repo.findById(id).orElse(null);
+
 		if (customer != null) {
+
 			CustomerDto dto = modelMapper.map(customer, CustomerDto.class);
+
 			logger.info("Customer found with id: " + id);
+
 			return new ResponseEntity<CustomerDto>(dto, HttpStatus.OK);
 		}
+
 		CustomerResponse response = new CustomerResponse();
 		response.setMessage("Customer not found with id: " + id);
+
 		logger.info("Customer not found with id: " + id);
+
 		return new ResponseEntity<CustomerResponse>(response, HttpStatus.OK);
 	}
 

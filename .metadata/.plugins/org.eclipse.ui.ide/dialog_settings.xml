@@ -116,6 +116,8 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="D:\Project\Loan App\notificationService"/>
+			<item value="C:\Users\sudar\Downloads\Spring_Boot_Loan_Application_Project-main\Spring_Boot_Loan_Application_Project-main\notificationService"/>
 			<item value="D:\Project\Loan App\EurekaServer"/>
 		</list>
 	</section>
