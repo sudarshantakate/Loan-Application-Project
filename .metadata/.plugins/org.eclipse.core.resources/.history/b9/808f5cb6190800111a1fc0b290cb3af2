@@ -1,0 +1,9 @@
+package com.ltifinance.loanapp.customerservice.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.ltifinance.loanapp.customerservice.entity.LogIn;
+
+public interface LoginRepository extends JpaRepository<LogIn, Integer>{
+
+}

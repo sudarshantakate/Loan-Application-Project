@@ -3,6 +3,7 @@ package com.ltifinance.loanapp.customerservice.service;
 import org.springframework.http.ResponseEntity;
 
 import com.ltifinance.loanapp.customerservice.dto.CustomerDto;
+import com.ltifinance.loanapp.customerservice.dto.ForgetPassword;
 import com.ltifinance.loanapp.customerservice.entity.Customer;
 import com.ltifinance.loanapp.customerservice.response.CustomerResponse;
 
@@ -19,5 +20,7 @@ public interface CustomerService {
 	public ResponseEntity<?> updateCustomerByUsername(String username, CustomerDto dto);
 
 	public ResponseEntity<?> deleteCustomerByEmail(String email);
+
+	public ResponseEntity<?> forgetPassword(ForgetPassword dto);
 
 }

@@ -13,15 +13,22 @@ import org.springframework.stereotype.Service;
 
 import com.ltifinance.loanapp.customerservice.constant.EnumData;
 import com.ltifinance.loanapp.customerservice.dto.CustomerDto;
+import com.ltifinance.loanapp.customerservice.dto.ForgetPassword;
+import com.ltifinance.loanapp.customerservice.dto.LogInDto;
 import com.ltifinance.loanapp.customerservice.entity.Customer;
+import com.ltifinance.loanapp.customerservice.entity.LogIn;
 import com.ltifinance.loanapp.customerservice.repository.CustomerRepository;
+import com.ltifinance.loanapp.customerservice.repository.LoginRepository;
 import com.ltifinance.loanapp.customerservice.response.CustomerResponse;
 
 @Service
 public class CustomerServiceImpl implements CustomerService {
 
 	@Autowired
-	private CustomerRepository repo;
+	private CustomerRepository customerrepository;
+
+	@Autowired
+	private LoginRepository loginrepo;
 
 	@Autowired
 	private ModelMapper modelMapper;
@@ -51,7 +58,13 @@ public class CustomerServiceImpl implements CustomerService {
 			customerresponse.setMessage("Customer Email Already Exist.");
 			return customerresponse;
 		}
-		Customer customer1 = repo.save(customer);
+		LogIn login = new LogIn();
+		login.setUsername(customer.getUsername());
+		login.setEmail(customer.getEmail());
+		login.setPassword(customer.getPassword());
+		login.setCustomer(customer);
+		customer.setLogin(login);
+		Customer customer1 = customerrepository.save(customer);
 		if (customer1 != null) {
 			customerresponse.setUsername(customer1.getUsername());
 			customerresponse.setMessage("Customer profile created successfully!!");
@@ -63,7 +76,7 @@ public class CustomerServiceImpl implements CustomerService {
 	}
 
 	private boolean getAlreadyRegisterdEmployeeData(String email) {
-		Customer customer = repo.findByEmail(email);
+		Customer customer = customerrepository.findByEmail(email);
 		if (customer != null) {
 			return true;
 		}
@@ -73,9 +86,16 @@ public class CustomerServiceImpl implements CustomerService {
 	@Override
 	public ResponseEntity<?> getCustomerByEmail(String email) {
 		logger.info("In customer impl getting by email start");
-		Customer customer = repo.findByEmail(email);
+		Customer customer = customerrepository.findByEmail(email);
 		if (customer != null) {
-			CustomerDto dto = modelMapper.map(customer, CustomerDto.class);
+//			CustomerDto dto = modelMapper.map(customer, CustomerDto.class);
+			LogInDto loginDto = LogInDto.builder().username(customer.getUsername())
+					.email(customer.getEmail()).build();
+			CustomerDto dto = CustomerDto.builder().fname(customer.getFname()).lname(customer.getLname())
+					.address(customer.getAddress()).username(customer.getUsername()).email(customer.getEmail())
+					.mobileNumber(customer.getMobileNumber()).dob(customer.getDob()).country(customer.getCountry())
+					.state(customer.getState()).city(customer.getCity()).zipcode(customer.getZipcode())
+					.logindto(loginDto).build();
 			logger.info("Customer found with email: " + email);
 			return new ResponseEntity<CustomerDto>(dto, HttpStatus.OK);
 		}
@@ -90,7 +110,7 @@ public class CustomerServiceImpl implements CustomerService {
 	@Override
 	public ResponseEntity<?> getCustomerByUsername(String username) {
 		logger.info("In customer impl getting by username start");
-		Customer customer = repo.findByUsername(username);
+		Customer customer = customerrepository.findByUsername(username);
 		if (customer != null) {
 			CustomerDto dto = modelMapper.map(customer, CustomerDto.class);
 			logger.info("Customer found with username: " + username);
@@ -106,7 +126,7 @@ public class CustomerServiceImpl implements CustomerService {
 	@Override
 	public ResponseEntity<?> getCustomerById(int id) {
 		logger.info("In customer impl getting by id start");
-		Customer customer = repo.findById(id);
+		Customer customer = customerrepository.findById(id);
 		if (customer != null) {
 			CustomerDto dto = modelMapper.map(customer, CustomerDto.class);
 			logger.info("Customer found with id: " + id);
@@ -121,14 +141,14 @@ public class CustomerServiceImpl implements CustomerService {
 	@Override
 	public ResponseEntity<?> updateCustomerByUsername(String username, CustomerDto dto) {
 		logger.info("Update customer start");
-		Customer customer = repo.findByUsername(username);
+		Customer customer = customerrepository.findByUsername(username);
 		if (customer == null) {
 			return new ResponseEntity<>("Customer not found", HttpStatus.NOT_FOUND);
 		}
 		modelMapper.map(dto, customer);
 		customer.setUpdatedBy(username);
 		customer.setUpdateDate(new java.util.Date().toString());
-		repo.save(customer);
+		customerrepository.save(customer);
 		logger.info("Customer updated successfully");
 		return new ResponseEntity<>("Customer updated successfully", HttpStatus.OK);
 	}
@@ -136,7 +156,7 @@ public class CustomerServiceImpl implements CustomerService {
 	@Override
 	public ResponseEntity<?> deleteCustomerByEmail(String email) {
 		logger.info("In Customer Service Delete Customer By Email Method");
-		Customer customer = repo.findByEmail(email);
+		Customer customer = customerrepository.findByEmail(email);
 		boolean flag = true;
 		if (customer != null) {
 			if (customer.isStatus()) {
@@ -147,7 +167,7 @@ public class CustomerServiceImpl implements CustomerService {
 				customer.setStatus(flag);
 				customer.setUpdatedBy(customer.getUsername());
 				customer.setUpdateDate(new java.util.Date().toString());
-				repo.save(customer);
+				customerrepository.save(customer);
 				return new ResponseEntity<Customer>(customer, HttpStatus.OK);
 			} else {
 				CustomerResponse response = new CustomerResponse();
@@ -160,5 +180,31 @@ public class CustomerServiceImpl implements CustomerService {
 		response.setUsername(email);
 		response.setMessage("Customer not found with this email");
 		return new ResponseEntity<CustomerResponse>(response, HttpStatus.OK);
+	}
+
+	@Override
+	public ResponseEntity<?> forgetPassword(ForgetPassword dto) {
+		logger.info("Forgot password process start");
+		// check password match
+		if (!dto.getNewpassword().equals(dto.getConfirmPassword())) {
+			CustomerResponse response = new CustomerResponse();
+			response.setUsername(dto.getUsername());
+			response.setMessage("New password and confirm password do not match");
+			return new ResponseEntity<CustomerResponse>(response, HttpStatus.BAD_REQUEST);
+		}
+		// verify username + email
+		Customer customer = customerrepository.findByUsernameAndEmail(dto.getUsername(), dto.getEmail());
+		if (customer != null) {
+			customer.setPassword(dto.getNewpassword());
+			customer.setUpdatedBy(dto.getUsername());
+			customer.setUpdateDate(new java.util.Date().toString());
+			customerrepository.save(customer);
+			logger.info("Password updated successfully");
+			return new ResponseEntity<>("Password updated successfully", HttpStatus.OK);
+		}
+		CustomerResponse response = new CustomerResponse();
+		response.setUsername(dto.getUsername());
+		response.setMessage("Invalid username or email");
+		return new ResponseEntity<CustomerResponse>(response, HttpStatus.NOT_FOUND);
 	}
 }

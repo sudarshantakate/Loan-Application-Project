@@ -43,7 +43,7 @@ public class RegisterController {
 		return response;
 	}
 
-	@DeleteMapping("/api/customer/email/{email}")
+	@DeleteMapping("/api/recustomer/deleteCustomer/{email}")
 	public ResponseEntity<?> deleteCustomerByEmail(@PathVariable String email) {
 		logger.info("Controller delete customer by email start");
 		ResponseEntity<?> response = service.deleteCustomerByEmail(email);

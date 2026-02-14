@@ -1,8 +1,0 @@
-package com.ltifinance.loanapp.customerservice.entity;
-
-public class LogIn {
-
-	private String username;
-	
-	private String password;
-}

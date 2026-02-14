@@ -1,8 +1,13 @@
 package com.ltifinance.loanapp.customerservice.dto;
-
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 public class CustomerDto {
 
 	private String fname;
@@ -19,6 +24,6 @@ public class CustomerDto {
     private String city;
     private String zipcode;
     
-    private boolean status;
+    private LogInDto logindto;
 
 }

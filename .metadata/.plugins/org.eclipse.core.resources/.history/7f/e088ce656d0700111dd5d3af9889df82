@@ -1,0 +1,5 @@
+package com.ltifinance.loanapp.customerservice.dto;
+
+public class ForgetPassword {
+
+}

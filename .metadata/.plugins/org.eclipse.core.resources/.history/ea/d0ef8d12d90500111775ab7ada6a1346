@@ -1,9 +1,0 @@
-package com.ltifinance.loanapp.customerservice.service;
-
-import com.ltifinance.loanapp.customerservice.entity.Customer;
-
-public interface CustomerService {
-
-	public Customer registerCustomer(Customer customer);
-
-}
