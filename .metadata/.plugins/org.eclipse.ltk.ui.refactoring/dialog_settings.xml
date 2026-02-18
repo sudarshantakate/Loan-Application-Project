@@ -2,9 +2,11 @@
 <section name="Workbench">
 	<section name="RefactoringWizard.preview">
 		<item key="width" value="630"/>
-		<item key="height" value="390"/>
+		<item key="height" value="380"/>
 	</section>
 	<section name="org.eclipse.ltk.ui.refactoring.settings">
+		<item key="moveWizard.updateQualifiedNames" value="false"/>
+		<item key="patterns" value="*"/>
 	</section>
 	<section name="ExtractTempWizard">
 		<item key="declareFinal" value="false"/>

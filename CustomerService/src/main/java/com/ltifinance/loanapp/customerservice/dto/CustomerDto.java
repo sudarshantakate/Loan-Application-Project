@@ -1,4 +1,8 @@
 package com.ltifinance.loanapp.customerservice.dto;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import com.ltifinance.loanapp.customerservice.entity.LogIn;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -8,6 +12,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
+@JsonInclude(value = Include.NON_EMPTY)
 public class CustomerDto {
 
 	private String fname;

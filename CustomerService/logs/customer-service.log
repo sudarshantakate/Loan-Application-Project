@@ -1,147 +1,652 @@
-2026-02-13 13:08:04.772  INFO 10416 --- [restartedMain] c.l.l.c.CustomerServiceApplication       : Starting CustomerServiceApplication using Java 1.8.0_461 on Sudarshan with PID 10416 (D:\Project\Loan App\CustomerService\target\classes started by sudar in D:\Project\Loan App\CustomerService)
-2026-02-13 13:08:04.780  INFO 10416 --- [restartedMain] c.l.l.c.CustomerServiceApplication       : No active profile set, falling back to 1 default profile: "default"
-2026-02-13 13:08:04.860  INFO 10416 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2026-02-13 13:08:04.860  INFO 10416 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2026-02-13 13:08:06.761  INFO 10416 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-02-13 13:08:06.873  INFO 10416 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 95 ms. Found 2 JPA repository interfaces.
-2026-02-13 13:08:07.279  INFO 10416 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=e3b4c773-8625-3115-8d38-6a4080a10c51
-2026-02-13 13:08:08.358  INFO 10416 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 3001 (http)
-2026-02-13 13:08:08.362  INFO 10416 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-02-13 13:08:08.362  INFO 10416 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.78]
-2026-02-13 13:08:08.523  INFO 10416 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-02-13 13:08:08.523  INFO 10416 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3658 ms
-2026-02-13 13:08:08.969  INFO 10416 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2026-02-13 13:08:09.036  INFO 10416 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
-2026-02-13 13:08:09.228  INFO 10416 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2026-02-13 13:08:09.402  INFO 10416 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-02-13 13:08:10.814  INFO 10416 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-02-13 13:08:10.835  INFO 10416 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
-2026-02-13 13:08:11.902  INFO 10416 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2026-02-13 13:08:11.914  INFO 10416 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-02-13 13:08:12.783  WARN 10416 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-02-13 13:08:14.940  WARN 10416 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
-2026-02-13 13:08:15.826  INFO 10416 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses Jersey
-2026-02-13 13:08:15.935  WARN 10416 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2026-02-13 13:08:15.945  INFO 10416 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
-2026-02-13 13:08:16.075  INFO 10416 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
-2026-02-13 13:08:16.142  INFO 10416 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
-2026-02-13 13:08:16.273  INFO 10416 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
-2026-02-13 13:08:16.273  INFO 10416 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
-2026-02-13 13:08:16.457  INFO 10416 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
-2026-02-13 13:08:16.457  INFO 10416 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
-2026-02-13 13:08:16.726  INFO 10416 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2026-02-13 13:08:16.758  INFO 10416 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
-2026-02-13 13:08:16.758  INFO 10416 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
-2026-02-13 13:08:16.758  INFO 10416 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
-2026-02-13 13:08:16.758  INFO 10416 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
-2026-02-13 13:08:16.758  INFO 10416 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
-2026-02-13 13:08:16.758  INFO 10416 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
-2026-02-13 13:08:16.758  INFO 10416 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
-2026-02-13 13:08:17.130  INFO 10416 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
-2026-02-13 13:08:17.138  INFO 10416 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
-2026-02-13 13:08:17.140  INFO 10416 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
-2026-02-13 13:08:17.149  INFO 10416 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1770968297144 with initial instances count: 0
-2026-02-13 13:08:17.154  INFO 10416 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application CUSTOMERSERVICE with eureka with status UP
-2026-02-13 13:08:17.154  INFO 10416 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1770968297154, current=UP, previous=STARTING]
-2026-02-13 13:08:17.157  INFO 10416 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMERSERVICE/Sudarshan:CustomerService:3001: registering service...
-2026-02-13 13:08:17.201  INFO 10416 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 3001 (http) with context path ''
-2026-02-13 13:08:17.201  INFO 10416 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 3001
-2026-02-13 13:08:17.355  INFO 10416 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMERSERVICE/Sudarshan:CustomerService:3001 - registration status: 204
-2026-02-13 13:08:18.217  INFO 10416 --- [restartedMain] c.l.l.c.CustomerServiceApplication       : Started CustomerServiceApplication in 14.998 seconds (JVM running for 16.851)
-2026-02-13 13:08:47.148  INFO 10416 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
-2026-02-13 13:08:47.150  INFO 10416 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
-2026-02-13 13:08:47.150  INFO 10416 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
-2026-02-13 13:08:47.150  INFO 10416 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application is null : false
-2026-02-13 13:08:47.150  INFO 10416 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
-2026-02-13 13:08:47.150  INFO 10416 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application version is -1: false
-2026-02-13 13:08:47.150  INFO 10416 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
-2026-02-13 13:08:47.292  INFO 10416 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : The response status is 200
-2026-02-13 13:10:55.273  INFO 10416 --- [http-nio-3001-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-02-13 13:10:55.273  INFO 10416 --- [http-nio-3001-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-02-13 13:10:55.275  INFO 10416 --- [http-nio-3001-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2026-02-13 13:10:55.359  INFO 10416 --- [http-nio-3001-exec-2] c.l.l.c.controller.RegisterController    : In Customer Controller Start
-2026-02-13 13:10:55.359  INFO 10416 --- [http-nio-3001-exec-2] c.l.l.c.service.CustomerServiceImpl      : In customer impl getting by email start
-2026-02-13 13:10:55.833  INFO 10416 --- [http-nio-3001-exec-2] c.l.l.c.service.CustomerServiceImpl      : Customer found with email: sudarshantakate@gmail.com
-2026-02-13 13:10:55.837  INFO 10416 --- [http-nio-3001-exec-2] c.l.l.c.controller.RegisterController    : In Customer Controller End
-2026-02-13 13:11:37.972  INFO 10416 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
-2026-02-13 13:11:37.981  INFO 10416 --- [Thread-2] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application CUSTOMERSERVICE with eureka with status DOWN
-2026-02-13 13:11:37.981  INFO 10416 --- [Thread-2] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1770968497981, current=DOWN, previous=UP]
-2026-02-13 13:11:37.981  INFO 10416 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMERSERVICE/Sudarshan:CustomerService:3001: registering service...
-2026-02-13 13:11:37.997  INFO 10416 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMERSERVICE/Sudarshan:CustomerService:3001 - registration status: 204
-2026-02-13 13:11:38.517  INFO 10416 --- [Thread-2] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2026-02-13 13:11:38.527  INFO 10416 --- [Thread-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
-2026-02-13 13:11:38.553  INFO 10416 --- [Thread-2] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-02-13 13:11:38.558  INFO 10416 --- [Thread-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-02-13 13:11:38.585  INFO 10416 --- [Thread-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2026-02-13 13:11:38.591  INFO 10416 --- [Thread-2] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
-2026-02-13 13:11:41.597  INFO 10416 --- [Thread-2] com.netflix.discovery.DiscoveryClient    : Unregistering ...
-2026-02-13 13:11:41.627  INFO 10416 --- [Thread-2] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMERSERVICE/Sudarshan:CustomerService:3001 - deregister  status: 200
-2026-02-13 13:11:41.645  INFO 10416 --- [Thread-2] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
-2026-02-13 13:11:42.890  INFO 10416 --- [restartedMain] c.l.l.c.CustomerServiceApplication       : Starting CustomerServiceApplication using Java 1.8.0_461 on Sudarshan with PID 10416 (D:\Project\Loan App\CustomerService\target\classes started by sudar in D:\Project\Loan App\CustomerService)
-2026-02-13 13:11:42.890  INFO 10416 --- [restartedMain] c.l.l.c.CustomerServiceApplication       : No active profile set, falling back to 1 default profile: "default"
-2026-02-13 13:11:43.667  INFO 10416 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-02-13 13:11:43.698  INFO 10416 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 31 ms. Found 2 JPA repository interfaces.
-2026-02-13 13:11:43.824  INFO 10416 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=e3b4c773-8625-3115-8d38-6a4080a10c51
-2026-02-13 13:11:43.975  INFO 10416 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 3001 (http)
-2026-02-13 13:11:43.978  INFO 10416 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-02-13 13:11:43.979  INFO 10416 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.78]
-2026-02-13 13:11:44.002  INFO 10416 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-02-13 13:11:44.002  INFO 10416 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1104 ms
-2026-02-13 13:11:44.123  INFO 10416 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2026-02-13 13:11:44.138  INFO 10416 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
-2026-02-13 13:11:44.171  INFO 10416 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
-2026-02-13 13:11:44.171  INFO 10416 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
-2026-02-13 13:11:44.284  INFO 10416 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2026-02-13 13:11:44.284  INFO 10416 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-02-13 13:11:44.457  WARN 10416 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-02-13 13:11:45.575  WARN 10416 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
-2026-02-13 13:11:46.314  INFO 10416 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses Jersey
-2026-02-13 13:11:46.365  WARN 10416 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2026-02-13 13:11:46.365  INFO 10416 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
-2026-02-13 13:11:46.423  INFO 10416 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
-2026-02-13 13:11:46.423  INFO 10416 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
-2026-02-13 13:11:46.439  INFO 10416 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
-2026-02-13 13:11:46.439  INFO 10416 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
-2026-02-13 13:11:46.439  INFO 10416 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
-2026-02-13 13:11:46.439  INFO 10416 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
-2026-02-13 13:11:46.518  INFO 10416 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2026-02-13 13:11:46.518  INFO 10416 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
-2026-02-13 13:11:46.518  INFO 10416 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
-2026-02-13 13:11:46.518  INFO 10416 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
-2026-02-13 13:11:46.518  INFO 10416 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
-2026-02-13 13:11:46.518  INFO 10416 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
-2026-02-13 13:11:46.518  INFO 10416 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
-2026-02-13 13:11:46.518  INFO 10416 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
-2026-02-13 13:11:46.534  INFO 10416 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
-2026-02-13 13:11:46.534  INFO 10416 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
-2026-02-13 13:11:46.534  INFO 10416 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
-2026-02-13 13:11:46.534  INFO 10416 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1770968506534 with initial instances count: 1
-2026-02-13 13:11:46.534  INFO 10416 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application CUSTOMERSERVICE with eureka with status UP
-2026-02-13 13:11:46.534  INFO 10416 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1770968506534, current=UP, previous=STARTING]
-2026-02-13 13:11:46.534  INFO 10416 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMERSERVICE/Sudarshan:CustomerService:3001: registering service...
-2026-02-13 13:11:46.534  INFO 10416 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 3001 (http) with context path ''
-2026-02-13 13:11:46.550  INFO 10416 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 3001
-2026-02-13 13:11:46.555  INFO 10416 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMERSERVICE/Sudarshan:CustomerService:3001 - registration status: 204
-2026-02-13 13:11:47.302  INFO 10416 --- [restartedMain] c.l.l.c.CustomerServiceApplication       : Started CustomerServiceApplication in 5.275 seconds (JVM running for 225.94)
-2026-02-13 13:11:47.311  INFO 10416 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2026-02-13 13:11:58.930  INFO 10416 --- [http-nio-3001-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-02-13 13:11:58.930  INFO 10416 --- [http-nio-3001-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-02-13 13:11:58.939  INFO 10416 --- [http-nio-3001-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
-2026-02-13 13:11:58.946  INFO 10416 --- [http-nio-3001-exec-2] c.l.l.c.controller.RegisterController    : In Customer Controller Start
-2026-02-13 13:11:58.946  INFO 10416 --- [http-nio-3001-exec-2] c.l.l.c.service.CustomerServiceImpl      : In customer impl getting by email start
-2026-02-13 13:11:58.969  INFO 10416 --- [http-nio-3001-exec-2] c.l.l.c.service.CustomerServiceImpl      : Customer found with email: sudarshantakate@gmail.com
-2026-02-13 13:11:58.969  INFO 10416 --- [http-nio-3001-exec-2] c.l.l.c.controller.RegisterController    : In Customer Controller End
-2026-02-13 13:12:17.725  INFO 10416 --- [RMI TCP Connection(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
-2026-02-13 13:12:17.728  INFO 10416 --- [RMI TCP Connection(2)-127.0.0.1] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application CUSTOMERSERVICE with eureka with status DOWN
-2026-02-13 13:12:17.729  INFO 10416 --- [RMI TCP Connection(2)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1770968537729, current=DOWN, previous=UP]
-2026-02-13 13:12:17.729  INFO 10416 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMERSERVICE/Sudarshan:CustomerService:3001: registering service...
-2026-02-13 13:12:17.746  INFO 10416 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMERSERVICE/Sudarshan:CustomerService:3001 - registration status: 204
-2026-02-13 13:12:18.338  INFO 10416 --- [RMI TCP Connection(2)-127.0.0.1] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2026-02-13 13:12:18.338  INFO 10416 --- [RMI TCP Connection(2)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
-2026-02-13 13:12:18.351  INFO 10416 --- [RMI TCP Connection(2)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-02-13 13:12:18.353  INFO 10416 --- [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
-2026-02-13 13:12:18.377  INFO 10416 --- [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
-2026-02-13 13:12:18.379  INFO 10416 --- [RMI TCP Connection(2)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
-2026-02-13 13:12:21.384  INFO 10416 --- [RMI TCP Connection(2)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Unregistering ...
-2026-02-13 13:12:21.408  INFO 10416 --- [RMI TCP Connection(2)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMERSERVICE/Sudarshan:CustomerService:3001 - deregister  status: 200
-2026-02-13 13:12:21.422  INFO 10416 --- [RMI TCP Connection(2)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2026-02-18 09:32:22.458  INFO 8988 --- [restartedMain] c.l.l.c.CustomerServiceApplication       : Starting CustomerServiceApplication using Java 1.8.0_461 on Sudarshan with PID 8988 (D:\Project\Loan App\CustomerService\target\classes started by sudar in D:\Project\Loan App\CustomerService)
+2026-02-18 09:32:22.462  INFO 8988 --- [restartedMain] c.l.l.c.CustomerServiceApplication       : No active profile set, falling back to 1 default profile: "default"
+2026-02-18 09:32:22.516  INFO 8988 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-02-18 09:32:22.516  INFO 8988 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-02-18 09:32:23.513  INFO 8988 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-18 09:32:23.571  INFO 8988 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 51 ms. Found 2 JPA repository interfaces.
+2026-02-18 09:32:23.787  INFO 8988 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=13fdb8bc-bd1e-3094-991c-4d875e11113a
+2026-02-18 09:32:24.351  INFO 8988 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 3001 (http)
+2026-02-18 09:32:24.359  INFO 8988 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-02-18 09:32:24.360  INFO 8988 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.78]
+2026-02-18 09:32:24.438  INFO 8988 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-02-18 09:32:24.439  INFO 8988 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1922 ms
+2026-02-18 09:32:24.653  INFO 8988 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-18 09:32:24.684  INFO 8988 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
+2026-02-18 09:32:24.777  INFO 8988 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-02-18 09:32:24.840  INFO 8988 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-02-18 09:32:25.489  INFO 8988 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-02-18 09:32:25.501  INFO 8988 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2026-02-18 09:32:25.977  WARN 8988 --- [restartedMain] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "alter table customer drop foreign key FKnu696wfye1ydek9ncm8lcqnh7" via JDBC Statement
+
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "alter table customer drop foreign key FKnu696wfye1ydek9ncm8lcqnh7" via JDBC Statement
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-5.6.15.Final.jar:5.6.15.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applySqlString(SchemaDropperImpl.java:387) [hibernate-core-5.6.15.Final.jar:5.6.15.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applySqlStrings(SchemaDropperImpl.java:371) [hibernate-core-5.6.15.Final.jar:5.6.15.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applyConstraintDropping(SchemaDropperImpl.java:341) [hibernate-core-5.6.15.Final.jar:5.6.15.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropFromMetadata(SchemaDropperImpl.java:235) [hibernate-core-5.6.15.Final.jar:5.6.15.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.performDrop(SchemaDropperImpl.java:156) [hibernate-core-5.6.15.Final.jar:5.6.15.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:128) [hibernate-core-5.6.15.Final.jar:5.6.15.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:114) [hibernate-core-5.6.15.Final.jar:5.6.15.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:157) [hibernate-core-5.6.15.Final.jar:5.6.15.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:85) [hibernate-core-5.6.15.Final.jar:5.6.15.Final]
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:335) [hibernate-core-5.6.15.Final.jar:5.6.15.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:471) [hibernate-core-5.6.15.Final.jar:5.6.15.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1498) [hibernate-core-5.6.15.Final.jar:5.6.15.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58) [spring-orm-5.3.29.jar:5.3.29]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365) [spring-orm-5.3.29.jar:5.3.29]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) [spring-orm-5.3.29.jar:5.3.29]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) [spring-orm-5.3.29.jar:5.3.29]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341) [spring-orm-5.3.29.jar:5.3.29]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863) [spring-beans-5.3.29.jar:5.3.29]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800) [spring-beans-5.3.29.jar:5.3.29]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) [spring-beans-5.3.29.jar:5.3.29]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) [spring-beans-5.3.29.jar:5.3.29]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) [spring-beans-5.3.29.jar:5.3.29]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.29.jar:5.3.29]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) [spring-beans-5.3.29.jar:5.3.29]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) [spring-beans-5.3.29.jar:5.3.29]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1157) ~[spring-context-5.3.29.jar:5.3.29]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:911) ~[spring-context-5.3.29.jar:5.3.29]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.29.jar:5.3.29]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.14.jar:2.7.14]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731) ~[spring-boot-2.7.14.jar:2.7.14]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.14.jar:2.7.14]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307) ~[spring-boot-2.7.14.jar:2.7.14]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303) ~[spring-boot-2.7.14.jar:2.7.14]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292) ~[spring-boot-2.7.14.jar:2.7.14]
+	at com.ltifinance.loanapp.customerservice.CustomerServiceApplication.main(CustomerServiceApplication.java:10) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_461]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_461]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_461]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[na:1.8.0_461]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-2.7.14.jar:2.7.14]
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'customerloan.customer' doesn't exist
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_461]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source) ~[na:1.8.0_461]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source) ~[na:1.8.0_461]
+	at java.lang.reflect.Constructor.newInstance(Unknown Source) ~[na:1.8.0_461]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:403) ~[mysql-connector-java-5.1.49.jar:5.1.49]
+	at com.mysql.jdbc.Util.getInstance(Util.java:386) ~[mysql-connector-java-5.1.49.jar:5.1.49]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:944) ~[mysql-connector-java-5.1.49.jar:5.1.49]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3933) ~[mysql-connector-java-5.1.49.jar:5.1.49]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3869) ~[mysql-connector-java-5.1.49.jar:5.1.49]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2524) ~[mysql-connector-java-5.1.49.jar:5.1.49]
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2675) ~[mysql-connector-java-5.1.49.jar:5.1.49]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2465) ~[mysql-connector-java-5.1.49.jar:5.1.49]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2439) ~[mysql-connector-java-5.1.49.jar:5.1.49]
+	at com.mysql.jdbc.StatementImpl.executeInternal(StatementImpl.java:829) ~[mysql-connector-java-5.1.49.jar:5.1.49]
+	at com.mysql.jdbc.StatementImpl.execute(StatementImpl.java:729) ~[mysql-connector-java-5.1.49.jar:5.1.49]
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-4.0.3.jar:na]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54) ~[hibernate-core-5.6.15.Final.jar:5.6.15.Final]
+	... 40 common frames omitted
+
+2026-02-18 09:32:25.980  WARN 8988 --- [restartedMain] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "alter table log_in drop foreign key FKsl4xe9aihknuw0lwanq2rgva9" via JDBC Statement
+
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "alter table log_in drop foreign key FKsl4xe9aihknuw0lwanq2rgva9" via JDBC Statement
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-5.6.15.Final.jar:5.6.15.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applySqlString(SchemaDropperImpl.java:387) [hibernate-core-5.6.15.Final.jar:5.6.15.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applySqlStrings(SchemaDropperImpl.java:371) [hibernate-core-5.6.15.Final.jar:5.6.15.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applyConstraintDropping(SchemaDropperImpl.java:341) [hibernate-core-5.6.15.Final.jar:5.6.15.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropFromMetadata(SchemaDropperImpl.java:235) [hibernate-core-5.6.15.Final.jar:5.6.15.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.performDrop(SchemaDropperImpl.java:156) [hibernate-core-5.6.15.Final.jar:5.6.15.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:128) [hibernate-core-5.6.15.Final.jar:5.6.15.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:114) [hibernate-core-5.6.15.Final.jar:5.6.15.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:157) [hibernate-core-5.6.15.Final.jar:5.6.15.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:85) [hibernate-core-5.6.15.Final.jar:5.6.15.Final]
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:335) [hibernate-core-5.6.15.Final.jar:5.6.15.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:471) [hibernate-core-5.6.15.Final.jar:5.6.15.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1498) [hibernate-core-5.6.15.Final.jar:5.6.15.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58) [spring-orm-5.3.29.jar:5.3.29]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365) [spring-orm-5.3.29.jar:5.3.29]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) [spring-orm-5.3.29.jar:5.3.29]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) [spring-orm-5.3.29.jar:5.3.29]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341) [spring-orm-5.3.29.jar:5.3.29]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863) [spring-beans-5.3.29.jar:5.3.29]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800) [spring-beans-5.3.29.jar:5.3.29]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) [spring-beans-5.3.29.jar:5.3.29]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) [spring-beans-5.3.29.jar:5.3.29]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) [spring-beans-5.3.29.jar:5.3.29]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.29.jar:5.3.29]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) [spring-beans-5.3.29.jar:5.3.29]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) [spring-beans-5.3.29.jar:5.3.29]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1157) ~[spring-context-5.3.29.jar:5.3.29]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:911) ~[spring-context-5.3.29.jar:5.3.29]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.29.jar:5.3.29]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.14.jar:2.7.14]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731) ~[spring-boot-2.7.14.jar:2.7.14]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.14.jar:2.7.14]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307) ~[spring-boot-2.7.14.jar:2.7.14]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303) ~[spring-boot-2.7.14.jar:2.7.14]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292) ~[spring-boot-2.7.14.jar:2.7.14]
+	at com.ltifinance.loanapp.customerservice.CustomerServiceApplication.main(CustomerServiceApplication.java:10) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_461]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_461]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_461]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[na:1.8.0_461]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-2.7.14.jar:2.7.14]
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'customerloan.log_in' doesn't exist
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_461]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source) ~[na:1.8.0_461]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source) ~[na:1.8.0_461]
+	at java.lang.reflect.Constructor.newInstance(Unknown Source) ~[na:1.8.0_461]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:403) ~[mysql-connector-java-5.1.49.jar:5.1.49]
+	at com.mysql.jdbc.Util.getInstance(Util.java:386) ~[mysql-connector-java-5.1.49.jar:5.1.49]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:944) ~[mysql-connector-java-5.1.49.jar:5.1.49]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3933) ~[mysql-connector-java-5.1.49.jar:5.1.49]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3869) ~[mysql-connector-java-5.1.49.jar:5.1.49]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2524) ~[mysql-connector-java-5.1.49.jar:5.1.49]
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2675) ~[mysql-connector-java-5.1.49.jar:5.1.49]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2465) ~[mysql-connector-java-5.1.49.jar:5.1.49]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2439) ~[mysql-connector-java-5.1.49.jar:5.1.49]
+	at com.mysql.jdbc.StatementImpl.executeInternal(StatementImpl.java:829) ~[mysql-connector-java-5.1.49.jar:5.1.49]
+	at com.mysql.jdbc.StatementImpl.execute(StatementImpl.java:729) ~[mysql-connector-java-5.1.49.jar:5.1.49]
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-4.0.3.jar:na]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54) ~[hibernate-core-5.6.15.Final.jar:5.6.15.Final]
+	... 40 common frames omitted
+
+2026-02-18 09:32:26.149  INFO 8988 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2026-02-18 09:32:26.159  INFO 8988 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-18 09:32:26.587  WARN 8988 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'loginController': Unsatisfied dependency expressed through field 'service'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'customerServiceImpl': Unsatisfied dependency expressed through field 'restTemplate'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.web.client.RestTemplate' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2026-02-18 09:32:26.588  INFO 8988 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-02-18 09:32:26.592  INFO 8988 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-02-18 09:32:26.608  INFO 8988 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-02-18 09:32:26.611  INFO 8988 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-02-18 09:32:26.629  INFO 8988 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2026-02-18 09:32:26.660 ERROR 8988 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field restTemplate in com.ltifinance.loanapp.customerservice.service.CustomerServiceImpl required a bean of type 'org.springframework.web.client.RestTemplate' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.web.client.RestTemplate' in your configuration.
+
+2026-02-18 09:33:20.113  INFO 9112 --- [restartedMain] c.l.l.c.CustomerServiceApplication       : Starting CustomerServiceApplication using Java 1.8.0_461 on Sudarshan with PID 9112 (D:\Project\Loan App\CustomerService\target\classes started by sudar in D:\Project\Loan App\CustomerService)
+2026-02-18 09:33:20.114  INFO 9112 --- [restartedMain] c.l.l.c.CustomerServiceApplication       : No active profile set, falling back to 1 default profile: "default"
+2026-02-18 09:33:20.151  INFO 9112 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-02-18 09:33:20.151  INFO 9112 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-02-18 09:33:21.230  INFO 9112 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-18 09:33:21.289  INFO 9112 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 51 ms. Found 2 JPA repository interfaces.
+2026-02-18 09:33:21.520  INFO 9112 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=13fdb8bc-bd1e-3094-991c-4d875e11113a
+2026-02-18 09:33:22.089  INFO 9112 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 3001 (http)
+2026-02-18 09:33:22.096  INFO 9112 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-02-18 09:33:22.096  INFO 9112 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.78]
+2026-02-18 09:33:22.176  INFO 9112 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-02-18 09:33:22.177  INFO 9112 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2025 ms
+2026-02-18 09:33:22.402  INFO 9112 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-18 09:33:22.434  INFO 9112 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
+2026-02-18 09:33:22.527  INFO 9112 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-02-18 09:33:22.590  INFO 9112 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-02-18 09:33:23.207  INFO 9112 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-02-18 09:33:23.218  INFO 9112 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2026-02-18 09:33:23.721  INFO 9112 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2026-02-18 09:33:23.730  INFO 9112 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-18 09:33:24.155  WARN 9112 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'loginController': Unsatisfied dependency expressed through field 'service'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'customerServiceImpl': Unsatisfied dependency expressed through field 'restTemplate'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.web.client.RestTemplate' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2026-02-18 09:33:24.156  INFO 9112 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-02-18 09:33:24.160  INFO 9112 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-02-18 09:33:24.173  INFO 9112 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-02-18 09:33:24.175  INFO 9112 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-02-18 09:33:24.192  INFO 9112 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2026-02-18 09:33:24.215 ERROR 9112 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field restTemplate in com.ltifinance.loanapp.customerservice.service.CustomerServiceImpl required a bean of type 'org.springframework.web.client.RestTemplate' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.web.client.RestTemplate' in your configuration.
+
+2026-02-18 09:35:59.944  INFO 9604 --- [restartedMain] c.l.l.c.CustomerServiceApplication       : Starting CustomerServiceApplication using Java 1.8.0_461 on Sudarshan with PID 9604 (D:\Project\Loan App\CustomerService\target\classes started by sudar in D:\Project\Loan App\CustomerService)
+2026-02-18 09:35:59.945  INFO 9604 --- [restartedMain] c.l.l.c.CustomerServiceApplication       : No active profile set, falling back to 1 default profile: "default"
+2026-02-18 09:35:59.984  INFO 9604 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-02-18 09:35:59.984  INFO 9604 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-02-18 09:36:01.261  INFO 9604 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-18 09:36:01.332  INFO 9604 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 62 ms. Found 2 JPA repository interfaces.
+2026-02-18 09:36:01.620  INFO 9604 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=13fdb8bc-bd1e-3094-991c-4d875e11113a
+2026-02-18 09:36:02.371  INFO 9604 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 3001 (http)
+2026-02-18 09:36:02.383  INFO 9604 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-02-18 09:36:02.383  INFO 9604 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.78]
+2026-02-18 09:36:02.520  INFO 9604 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-02-18 09:36:02.520  INFO 9604 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2536 ms
+2026-02-18 09:36:02.789  INFO 9604 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-18 09:36:02.919  INFO 9604 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
+2026-02-18 09:36:03.096  INFO 9604 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-02-18 09:36:03.229  INFO 9604 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-02-18 09:36:03.900  INFO 9604 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-02-18 09:36:03.915  INFO 9604 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2026-02-18 09:36:04.656  INFO 9604 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2026-02-18 09:36:04.667  INFO 9604 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-18 09:36:05.092  WARN 9604 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'loginController': Unsatisfied dependency expressed through field 'service'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'customerServiceImpl': Unsatisfied dependency expressed through field 'restTemplate'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.web.client.RestTemplate' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2026-02-18 09:36:05.093  INFO 9604 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-02-18 09:36:05.096  INFO 9604 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-02-18 09:36:05.112  INFO 9604 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-02-18 09:36:05.114  INFO 9604 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-02-18 09:36:05.132  INFO 9604 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2026-02-18 09:36:05.157 ERROR 9604 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field restTemplate in com.ltifinance.loanapp.customerservice.service.CustomerServiceImpl required a bean of type 'org.springframework.web.client.RestTemplate' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.web.client.RestTemplate' in your configuration.
+
+2026-02-18 09:39:18.967  INFO 6352 --- [restartedMain] c.l.l.c.CustomerServiceApplication       : Starting CustomerServiceApplication using Java 1.8.0_461 on Sudarshan with PID 6352 (D:\Project\Loan App\CustomerService\target\classes started by sudar in D:\Project\Loan App\CustomerService)
+2026-02-18 09:39:18.969  INFO 6352 --- [restartedMain] c.l.l.c.CustomerServiceApplication       : No active profile set, falling back to 1 default profile: "default"
+2026-02-18 09:39:19.018  INFO 6352 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-02-18 09:39:19.018  INFO 6352 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-02-18 09:39:20.227  INFO 6352 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-18 09:39:20.295  INFO 6352 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 61 ms. Found 2 JPA repository interfaces.
+2026-02-18 09:39:20.538  INFO 6352 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=df54b7ee-ef45-383c-b96b-1458517694c4
+2026-02-18 09:39:21.255  INFO 6352 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 3001 (http)
+2026-02-18 09:39:21.263  INFO 6352 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-02-18 09:39:21.264  INFO 6352 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.78]
+2026-02-18 09:39:21.397  INFO 6352 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-02-18 09:39:21.397  INFO 6352 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2378 ms
+2026-02-18 09:39:21.664  INFO 6352 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-18 09:39:21.772  INFO 6352 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
+2026-02-18 09:39:21.958  INFO 6352 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-02-18 09:39:22.080  INFO 6352 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-02-18 09:39:22.756  INFO 6352 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-02-18 09:39:22.770  INFO 6352 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2026-02-18 09:39:23.487  INFO 6352 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2026-02-18 09:39:23.499  INFO 6352 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-18 09:39:23.985  WARN 6352 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-18 09:39:25.074  WARN 6352 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2026-02-18 09:39:25.555  INFO 6352 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses Jersey
+2026-02-18 09:39:25.615  WARN 6352 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-02-18 09:39:25.620  INFO 6352 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2026-02-18 09:39:25.694  INFO 6352 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2026-02-18 09:39:25.738  INFO 6352 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2026-02-18 09:39:25.794  INFO 6352 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2026-02-18 09:39:25.794  INFO 6352 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2026-02-18 09:39:25.901  INFO 6352 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2026-02-18 09:39:25.901  INFO 6352 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2026-02-18 09:39:26.039  INFO 6352 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-02-18 09:39:26.059  INFO 6352 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-02-18 09:39:26.059  INFO 6352 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-02-18 09:39:26.059  INFO 6352 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-02-18 09:39:26.059  INFO 6352 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-02-18 09:39:26.059  INFO 6352 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-02-18 09:39:26.059  INFO 6352 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2026-02-18 09:39:26.059  INFO 6352 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-02-18 09:39:26.193  INFO 6352 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-02-18 09:39:26.195  INFO 6352 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2026-02-18 09:39:26.198  INFO 6352 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-02-18 09:39:26.202  INFO 6352 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1771387766201 with initial instances count: 1
+2026-02-18 09:39:26.204  INFO 6352 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application CUSTOMERSERVICE with eureka with status UP
+2026-02-18 09:39:26.205  INFO 6352 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1771387766205, current=UP, previous=STARTING]
+2026-02-18 09:39:26.207  INFO 6352 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMERSERVICE/Sudarshan:CustomerService:3001: registering service...
+2026-02-18 09:39:26.241  INFO 6352 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 3001 (http) with context path ''
+2026-02-18 09:39:26.243  INFO 6352 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 3001
+2026-02-18 09:39:26.265  INFO 6352 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMERSERVICE/Sudarshan:CustomerService:3001 - registration status: 204
+2026-02-18 09:39:26.736  INFO 6352 --- [restartedMain] c.l.l.c.CustomerServiceApplication       : Started CustomerServiceApplication in 8.7 seconds (JVM running for 9.661)
+2026-02-18 09:43:48.832  INFO 6352 --- [http-nio-3001-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-02-18 09:43:48.832  INFO 6352 --- [http-nio-3001-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-02-18 09:43:48.834  INFO 6352 --- [http-nio-3001-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-02-18 09:43:48.855  WARN 6352 --- [http-nio-3001-exec-3] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+2026-02-18 09:43:53.563  INFO 6352 --- [http-nio-3001-exec-1] c.l.l.c.controller.RegisterController    : In Customer Controller Start.
+2026-02-18 09:43:53.564  INFO 6352 --- [http-nio-3001-exec-1] c.l.l.c.service.CustomerServiceImpl      : In Service Layer Start
+2026-02-18 09:43:53.794  INFO 6352 --- [http-nio-3001-exec-1] c.l.l.c.service.CustomerServiceImpl      : In Service layer End
+2026-02-18 09:43:53.794  INFO 6352 --- [http-nio-3001-exec-1] c.l.l.c.controller.RegisterController    : In Customer Controller End.
+2026-02-18 09:44:26.066  INFO 6352 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-02-18 09:45:44.583  INFO 6352 --- [http-nio-3001-exec-7] c.l.l.c.controller.RegisterController    : Controller assigne role start
+2026-02-18 09:45:44.825  WARN 6352 --- [http-nio-3001-exec-7] o.s.c.l.core.RoundRobinLoadBalancer      : No servers available for service: localhost
+2026-02-18 09:45:44.864 ERROR 6352 --- [http-nio-3001-exec-7] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.IllegalStateException: No instances available for localhost] with root cause
+
+java.lang.IllegalStateException: No instances available for localhost
+	at org.springframework.cloud.loadbalancer.blocking.client.BlockingLoadBalancerClient.execute(BlockingLoadBalancerClient.java:89) ~[spring-cloud-loadbalancer-3.1.7.jar:3.1.7]
+	at org.springframework.cloud.client.loadbalancer.LoadBalancerInterceptor.intercept(LoadBalancerInterceptor.java:56) ~[spring-cloud-commons-3.1.7.jar:3.1.7]
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:93) ~[spring-web-5.3.29.jar:5.3.29]
+	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:77) ~[spring-web-5.3.29.jar:5.3.29]
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48) ~[spring-web-5.3.29.jar:5.3.29]
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66) ~[spring-web-5.3.29.jar:5.3.29]
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:782) ~[spring-web-5.3.29.jar:5.3.29]
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:717) ~[spring-web-5.3.29.jar:5.3.29]
+	at org.springframework.web.client.RestTemplate.getForObject(RestTemplate.java:340) ~[spring-web-5.3.29.jar:5.3.29]
+	at com.ltifinance.loanapp.customerservice.service.CustomerServiceImpl.assignRoleToUser(CustomerServiceImpl.java:224) ~[classes/:na]
+	at com.ltifinance.loanapp.customerservice.controller.LoginController.assignRole(LoginController.java:60) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_461]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_461]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_461]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[na:1.8.0_461]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-5.3.29.jar:5.3.29]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-5.3.29.jar:5.3.29]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.29.jar:5.3.29]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.29.jar:5.3.29]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.29.jar:5.3.29]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.29.jar:5.3.29]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072) ~[spring-webmvc-5.3.29.jar:5.3.29]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965) ~[spring-webmvc-5.3.29.jar:5.3.29]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.29.jar:5.3.29]
+	at org.springframework.web.servlet.FrameworkServlet.doPut(FrameworkServlet.java:920) ~[spring-webmvc-5.3.29.jar:5.3.29]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:558) ~[tomcat-embed-core-9.0.78.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.29.jar:5.3.29]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623) ~[tomcat-embed-core-9.0.78.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209) ~[tomcat-embed-core-9.0.78.jar:9.0.78]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.78.jar:9.0.78]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-9.0.78.jar:9.0.78]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.78.jar:9.0.78]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.78.jar:9.0.78]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.29.jar:5.3.29]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.29.jar:5.3.29]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.78.jar:9.0.78]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.78.jar:9.0.78]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.29.jar:5.3.29]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.29.jar:5.3.29]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.78.jar:9.0.78]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.78.jar:9.0.78]
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96) ~[spring-boot-actuator-2.7.14.jar:2.7.14]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.29.jar:5.3.29]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.78.jar:9.0.78]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.78.jar:9.0.78]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.29.jar:5.3.29]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.29.jar:5.3.29]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.78.jar:9.0.78]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.78.jar:9.0.78]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-9.0.78.jar:9.0.78]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) [tomcat-embed-core-9.0.78.jar:9.0.78]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481) [tomcat-embed-core-9.0.78.jar:9.0.78]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130) [tomcat-embed-core-9.0.78.jar:9.0.78]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) [tomcat-embed-core-9.0.78.jar:9.0.78]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.78.jar:9.0.78]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.78.jar:9.0.78]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390) [tomcat-embed-core-9.0.78.jar:9.0.78]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) [tomcat-embed-core-9.0.78.jar:9.0.78]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926) [tomcat-embed-core-9.0.78.jar:9.0.78]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791) [tomcat-embed-core-9.0.78.jar:9.0.78]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) [tomcat-embed-core-9.0.78.jar:9.0.78]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) [tomcat-embed-core-9.0.78.jar:9.0.78]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) [tomcat-embed-core-9.0.78.jar:9.0.78]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.78.jar:9.0.78]
+	at java.lang.Thread.run(Unknown Source) [na:1.8.0_461]
+
+2026-02-18 09:46:04.854  INFO 6352 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-02-18 09:46:04.856  INFO 6352 --- [Thread-2] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application CUSTOMERSERVICE with eureka with status DOWN
+2026-02-18 09:46:04.857  INFO 6352 --- [Thread-2] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1771388164857, current=DOWN, previous=UP]
+2026-02-18 09:46:04.857  INFO 6352 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMERSERVICE/Sudarshan:CustomerService:3001: registering service...
+2026-02-18 09:46:04.870  INFO 6352 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMERSERVICE/Sudarshan:CustomerService:3001 - registration status: 204
+2026-02-18 09:46:05.088  INFO 6352 --- [Thread-2] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-02-18 09:46:05.091  INFO 6352 --- [Thread-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2026-02-18 09:46:05.096  WARN 6352 --- [Thread-2] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [boundedElastic-evictor-1] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.parkNanos(Unknown Source)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(Unknown Source)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(Unknown Source)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(Unknown Source)
+ java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+ java.lang.Thread.run(Unknown Source)
+2026-02-18 09:46:05.096  WARN 6352 --- [Thread-2] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [boundedElastic-1] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.parkNanos(Unknown Source)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(Unknown Source)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(Unknown Source)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(Unknown Source)
+ java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+ java.lang.Thread.run(Unknown Source)
+2026-02-18 09:46:05.097  WARN 6352 --- [Thread-2] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [pool-11-thread-1] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.parkNanos(Unknown Source)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(Unknown Source)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(Unknown Source)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(Unknown Source)
+ java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+ java.lang.Thread.run(Unknown Source)
+2026-02-18 09:46:05.106  INFO 6352 --- [Thread-2] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-02-18 09:46:05.112  INFO 6352 --- [Thread-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-02-18 09:46:05.127  INFO 6352 --- [Thread-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-02-18 09:46:05.128  INFO 6352 --- [Thread-2] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2026-02-18 09:46:08.133  INFO 6352 --- [Thread-2] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2026-02-18 09:46:08.163  INFO 6352 --- [Thread-2] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMERSERVICE/Sudarshan:CustomerService:3001 - deregister  status: 200
+2026-02-18 09:46:08.180  INFO 6352 --- [Thread-2] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2026-02-18 09:46:08.789  INFO 6352 --- [restartedMain] c.l.l.c.CustomerServiceApplication       : Starting CustomerServiceApplication using Java 1.8.0_461 on Sudarshan with PID 6352 (D:\Project\Loan App\CustomerService\target\classes started by sudar in D:\Project\Loan App\CustomerService)
+2026-02-18 09:46:08.789  INFO 6352 --- [restartedMain] c.l.l.c.CustomerServiceApplication       : No active profile set, falling back to 1 default profile: "default"
+2026-02-18 09:46:09.301  INFO 6352 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-18 09:46:09.317  INFO 6352 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 15 ms. Found 2 JPA repository interfaces.
+2026-02-18 09:46:09.402  INFO 6352 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=df54b7ee-ef45-383c-b96b-1458517694c4
+2026-02-18 09:46:09.492  INFO 6352 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 3001 (http)
+2026-02-18 09:46:09.493  INFO 6352 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-02-18 09:46:09.493  INFO 6352 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.78]
+2026-02-18 09:46:09.512  INFO 6352 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-02-18 09:46:09.512  INFO 6352 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 723 ms
+2026-02-18 09:46:09.630  INFO 6352 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-18 09:46:09.635  INFO 6352 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2026-02-18 09:46:09.656  INFO 6352 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2026-02-18 09:46:09.657  INFO 6352 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2026-02-18 09:46:09.740  INFO 6352 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2026-02-18 09:46:09.741  INFO 6352 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-18 09:46:09.888  WARN 6352 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-18 09:46:10.434  WARN 6352 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2026-02-18 09:46:10.776  INFO 6352 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses Jersey
+2026-02-18 09:46:10.799  WARN 6352 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-02-18 09:46:10.802  INFO 6352 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2026-02-18 09:46:10.836  INFO 6352 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2026-02-18 09:46:10.838  INFO 6352 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2026-02-18 09:46:10.853  INFO 6352 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2026-02-18 09:46:10.853  INFO 6352 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2026-02-18 09:46:10.853  INFO 6352 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2026-02-18 09:46:10.853  INFO 6352 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2026-02-18 09:46:10.910  INFO 6352 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-02-18 09:46:10.911  INFO 6352 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-02-18 09:46:10.912  INFO 6352 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-02-18 09:46:10.912  INFO 6352 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-02-18 09:46:10.912  INFO 6352 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-02-18 09:46:10.912  INFO 6352 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-02-18 09:46:10.912  INFO 6352 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2026-02-18 09:46:10.912  INFO 6352 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-02-18 09:46:10.917  INFO 6352 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-02-18 09:46:10.918  INFO 6352 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2026-02-18 09:46:10.919  INFO 6352 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-02-18 09:46:10.920  INFO 6352 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1771388170920 with initial instances count: 2
+2026-02-18 09:46:10.921  INFO 6352 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application CUSTOMERSERVICE with eureka with status UP
+2026-02-18 09:46:10.921  INFO 6352 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1771388170921, current=UP, previous=STARTING]
+2026-02-18 09:46:10.922  INFO 6352 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMERSERVICE/Sudarshan:CustomerService:3001: registering service...
+2026-02-18 09:46:10.927  INFO 6352 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 3001 (http) with context path ''
+2026-02-18 09:46:10.928  INFO 6352 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 3001
+2026-02-18 09:46:10.944  INFO 6352 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMERSERVICE/Sudarshan:CustomerService:3001 - registration status: 204
+2026-02-18 09:46:11.411  INFO 6352 --- [restartedMain] c.l.l.c.CustomerServiceApplication       : Started CustomerServiceApplication in 3.066 seconds (JVM running for 414.336)
+2026-02-18 09:46:11.421  INFO 6352 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-02-18 09:46:24.475  INFO 6352 --- [http-nio-3001-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-02-18 09:46:24.475  INFO 6352 --- [http-nio-3001-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-02-18 09:46:24.477  INFO 6352 --- [http-nio-3001-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-02-18 09:46:24.482  INFO 6352 --- [http-nio-3001-exec-2] c.l.l.c.controller.RegisterController    : Controller assigne role start
+2026-02-18 09:46:24.514  WARN 6352 --- [http-nio-3001-exec-2] o.s.c.l.core.RoundRobinLoadBalancer      : No servers available for service: localhost
+2026-02-18 09:46:24.515 ERROR 6352 --- [http-nio-3001-exec-2] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.IllegalStateException: No instances available for localhost] with root cause
+
+java.lang.IllegalStateException: No instances available for localhost
+	at org.springframework.cloud.loadbalancer.blocking.client.BlockingLoadBalancerClient.execute(BlockingLoadBalancerClient.java:89) ~[spring-cloud-loadbalancer-3.1.7.jar:3.1.7]
+	at org.springframework.cloud.client.loadbalancer.LoadBalancerInterceptor.intercept(LoadBalancerInterceptor.java:56) ~[spring-cloud-commons-3.1.7.jar:3.1.7]
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:93) ~[spring-web-5.3.29.jar:5.3.29]
+	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:77) ~[spring-web-5.3.29.jar:5.3.29]
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48) ~[spring-web-5.3.29.jar:5.3.29]
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66) ~[spring-web-5.3.29.jar:5.3.29]
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:782) ~[spring-web-5.3.29.jar:5.3.29]
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:717) ~[spring-web-5.3.29.jar:5.3.29]
+	at org.springframework.web.client.RestTemplate.getForObject(RestTemplate.java:340) ~[spring-web-5.3.29.jar:5.3.29]
+	at com.ltifinance.loanapp.customerservice.service.CustomerServiceImpl.assignRoleToUser(CustomerServiceImpl.java:224) ~[classes/:na]
+	at com.ltifinance.loanapp.customerservice.controller.LoginController.assignRole(LoginController.java:60) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_461]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_461]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_461]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[na:1.8.0_461]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-5.3.29.jar:5.3.29]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-5.3.29.jar:5.3.29]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.29.jar:5.3.29]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.29.jar:5.3.29]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.29.jar:5.3.29]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.29.jar:5.3.29]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072) ~[spring-webmvc-5.3.29.jar:5.3.29]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965) ~[spring-webmvc-5.3.29.jar:5.3.29]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.29.jar:5.3.29]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) ~[spring-webmvc-5.3.29.jar:5.3.29]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555) ~[tomcat-embed-core-9.0.78.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.29.jar:5.3.29]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623) ~[tomcat-embed-core-9.0.78.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209) ~[tomcat-embed-core-9.0.78.jar:9.0.78]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.78.jar:9.0.78]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-9.0.78.jar:9.0.78]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.78.jar:9.0.78]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.78.jar:9.0.78]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.29.jar:5.3.29]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.29.jar:5.3.29]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.78.jar:9.0.78]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.78.jar:9.0.78]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.29.jar:5.3.29]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.29.jar:5.3.29]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.78.jar:9.0.78]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.78.jar:9.0.78]
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96) ~[spring-boot-actuator-2.7.14.jar:2.7.14]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.29.jar:5.3.29]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.78.jar:9.0.78]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.78.jar:9.0.78]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.29.jar:5.3.29]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.29.jar:5.3.29]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.78.jar:9.0.78]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.78.jar:9.0.78]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-9.0.78.jar:9.0.78]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) [tomcat-embed-core-9.0.78.jar:9.0.78]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481) [tomcat-embed-core-9.0.78.jar:9.0.78]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130) [tomcat-embed-core-9.0.78.jar:9.0.78]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) [tomcat-embed-core-9.0.78.jar:9.0.78]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.78.jar:9.0.78]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.78.jar:9.0.78]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390) [tomcat-embed-core-9.0.78.jar:9.0.78]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) [tomcat-embed-core-9.0.78.jar:9.0.78]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926) [tomcat-embed-core-9.0.78.jar:9.0.78]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791) [tomcat-embed-core-9.0.78.jar:9.0.78]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) [tomcat-embed-core-9.0.78.jar:9.0.78]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) [tomcat-embed-core-9.0.78.jar:9.0.78]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) [tomcat-embed-core-9.0.78.jar:9.0.78]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.78.jar:9.0.78]
+	at java.lang.Thread.run(Unknown Source) [na:1.8.0_461]
+
+2026-02-18 09:50:42.356  INFO 6352 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-02-18 09:50:42.358  INFO 6352 --- [Thread-8] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application CUSTOMERSERVICE with eureka with status DOWN
+2026-02-18 09:50:42.358  INFO 6352 --- [Thread-8] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1771388442358, current=DOWN, previous=UP]
+2026-02-18 09:50:42.358  INFO 6352 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMERSERVICE/Sudarshan:CustomerService:3001: registering service...
+2026-02-18 09:50:42.371  INFO 6352 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMERSERVICE/Sudarshan:CustomerService:3001 - registration status: 204
+2026-02-18 09:50:42.683  INFO 6352 --- [Thread-8] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-02-18 09:50:42.684  INFO 6352 --- [Thread-8] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2026-02-18 09:50:42.688  WARN 6352 --- [Thread-8] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [pool-18-thread-1] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.park(Unknown Source)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(Unknown Source)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(Unknown Source)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(Unknown Source)
+ java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+ java.lang.Thread.run(Unknown Source)
+2026-02-18 09:50:42.696  INFO 6352 --- [Thread-8] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-02-18 09:50:42.698  INFO 6352 --- [Thread-8] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2026-02-18 09:50:42.713  INFO 6352 --- [Thread-8] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2026-02-18 09:50:42.714  INFO 6352 --- [Thread-8] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2026-02-18 09:50:45.726  INFO 6352 --- [Thread-8] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2026-02-18 09:50:45.744  INFO 6352 --- [Thread-8] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMERSERVICE/Sudarshan:CustomerService:3001 - deregister  status: 200
+2026-02-18 09:50:45.760  INFO 6352 --- [Thread-8] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2026-02-18 09:50:46.563  INFO 6352 --- [restartedMain] c.l.l.c.CustomerServiceApplication       : Starting CustomerServiceApplication using Java 1.8.0_461 on Sudarshan with PID 6352 (D:\Project\Loan App\CustomerService\target\classes started by sudar in D:\Project\Loan App\CustomerService)
+2026-02-18 09:50:46.564  INFO 6352 --- [restartedMain] c.l.l.c.CustomerServiceApplication       : No active profile set, falling back to 1 default profile: "default"
+2026-02-18 09:50:46.948  INFO 6352 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-18 09:50:46.966  INFO 6352 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17 ms. Found 2 JPA repository interfaces.
+2026-02-18 09:50:47.040  INFO 6352 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=df54b7ee-ef45-383c-b96b-1458517694c4
+2026-02-18 09:50:47.112  INFO 6352 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 3001 (http)
+2026-02-18 09:50:47.113  INFO 6352 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-02-18 09:50:47.113  INFO 6352 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.78]
+2026-02-18 09:50:47.129  INFO 6352 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-02-18 09:50:47.129  INFO 6352 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 563 ms
+2026-02-18 09:50:47.217  INFO 6352 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-18 09:50:47.220  INFO 6352 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2026-02-18 09:50:47.241  INFO 6352 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2026-02-18 09:50:47.241  INFO 6352 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2026-02-18 09:50:47.302  INFO 6352 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2026-02-18 09:50:47.302  INFO 6352 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-18 09:50:47.402  WARN 6352 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-18 09:50:47.989  WARN 6352 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2026-02-18 09:50:48.425  INFO 6352 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses Jersey
+2026-02-18 09:50:48.457  WARN 6352 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-02-18 09:50:48.460  INFO 6352 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2026-02-18 09:50:48.486  INFO 6352 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2026-02-18 09:50:48.488  INFO 6352 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2026-02-18 09:50:48.489  INFO 6352 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2026-02-18 09:50:48.489  INFO 6352 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2026-02-18 09:50:48.489  INFO 6352 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2026-02-18 09:50:48.489  INFO 6352 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2026-02-18 09:50:48.531  INFO 6352 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-02-18 09:50:48.534  INFO 6352 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-02-18 09:50:48.534  INFO 6352 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-02-18 09:50:48.534  INFO 6352 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-02-18 09:50:48.534  INFO 6352 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-02-18 09:50:48.534  INFO 6352 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-02-18 09:50:48.534  INFO 6352 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2026-02-18 09:50:48.535  INFO 6352 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-02-18 09:50:48.538  INFO 6352 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-02-18 09:50:48.539  INFO 6352 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2026-02-18 09:50:48.539  INFO 6352 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-02-18 09:50:48.540  INFO 6352 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1771388448540 with initial instances count: 2
+2026-02-18 09:50:48.542  INFO 6352 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application CUSTOMERSERVICE with eureka with status UP
+2026-02-18 09:50:48.542  INFO 6352 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1771388448542, current=UP, previous=STARTING]
+2026-02-18 09:50:48.542  INFO 6352 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMERSERVICE/Sudarshan:CustomerService:3001: registering service...
+2026-02-18 09:50:48.547  INFO 6352 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 3001 (http) with context path ''
+2026-02-18 09:50:48.547  INFO 6352 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 3001
+2026-02-18 09:50:48.564  INFO 6352 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMERSERVICE/Sudarshan:CustomerService:3001 - registration status: 204
+2026-02-18 09:50:48.919  INFO 6352 --- [restartedMain] c.l.l.c.CustomerServiceApplication       : Started CustomerServiceApplication in 2.762 seconds (JVM running for 691.844)
+2026-02-18 09:50:48.922  INFO 6352 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-02-18 09:51:03.334  INFO 6352 --- [http-nio-3001-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-02-18 09:51:03.334  INFO 6352 --- [http-nio-3001-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-02-18 09:51:03.340  INFO 6352 --- [http-nio-3001-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2026-02-18 09:51:03.345  INFO 6352 --- [http-nio-3001-exec-2] c.l.l.c.controller.RegisterController    : Controller assigne role start
+2026-02-18 09:52:54.969  INFO 6352 --- [RMI TCP Connection(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2026-02-18 09:52:54.971  INFO 6352 --- [RMI TCP Connection(2)-127.0.0.1] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application CUSTOMERSERVICE with eureka with status DOWN
+2026-02-18 09:52:54.971  INFO 6352 --- [RMI TCP Connection(2)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1771388574971, current=DOWN, previous=UP]
+2026-02-18 09:52:54.971  INFO 6352 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMERSERVICE/Sudarshan:CustomerService:3001: registering service...
+2026-02-18 09:52:54.982  INFO 6352 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMERSERVICE/Sudarshan:CustomerService:3001 - registration status: 204
+2026-02-18 09:52:55.271  INFO 6352 --- [RMI TCP Connection(2)-127.0.0.1] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-02-18 09:52:55.272  INFO 6352 --- [RMI TCP Connection(2)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2026-02-18 09:52:55.285  INFO 6352 --- [RMI TCP Connection(2)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-02-18 09:52:55.287  INFO 6352 --- [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2026-02-18 09:52:55.303  INFO 6352 --- [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2026-02-18 09:52:55.305  INFO 6352 --- [RMI TCP Connection(2)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2026-02-18 09:52:58.318  INFO 6352 --- [RMI TCP Connection(2)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2026-02-18 09:52:58.335  INFO 6352 --- [RMI TCP Connection(2)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMERSERVICE/Sudarshan:CustomerService:3001 - deregister  status: 200
+2026-02-18 09:52:58.341  INFO 6352 --- [RMI TCP Connection(2)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient

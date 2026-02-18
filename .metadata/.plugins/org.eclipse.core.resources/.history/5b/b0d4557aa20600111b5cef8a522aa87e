@@ -1,5 +1,0 @@
-package com.ltifinance.loanapp.customerservice.config;
-
-public class ModelMapperConfig {
-
-}

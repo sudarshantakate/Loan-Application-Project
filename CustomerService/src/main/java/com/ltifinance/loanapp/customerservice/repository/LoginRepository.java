@@ -6,6 +6,7 @@ import org.springframework.stereotype.Repository;
 import com.ltifinance.loanapp.customerservice.entity.LogIn;
 
 @Repository
-public interface LoginRepository extends JpaRepository<LogIn, Integer>{
+public interface LoginRepository extends JpaRepository<LogIn, Integer> {
 
+	LogIn findById(int id);
 }

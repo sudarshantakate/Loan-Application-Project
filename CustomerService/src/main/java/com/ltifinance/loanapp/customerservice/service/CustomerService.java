@@ -23,4 +23,6 @@ public interface CustomerService {
 
 	public ResponseEntity<?> forgetPassword(ForgetPassword dto);
 
+	public ResponseEntity<?> assignRoleToUser(int id, String roleName);
+
 }
