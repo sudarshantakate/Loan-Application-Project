@@ -1,7 +1,0 @@
-1770646612280	Rename type 'UserRegisterController'
-1770648426868	Extract local variable 'strDate'
-1770720459780	Rename type 'ControllerRegisterController'
-1770721169708	Extract local variable 'customer'
-1770832603024	Extract local variable 'customer'
-1770905424163	Delete element
-1771050251040	Rename field 'repo'
