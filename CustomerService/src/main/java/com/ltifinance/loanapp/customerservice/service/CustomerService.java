@@ -1,5 +1,7 @@
 package com.ltifinance.loanapp.customerservice.service;
 
+import java.util.List;
+
 import org.springframework.http.ResponseEntity;
 
 import com.ltifinance.loanapp.customerservice.dto.CustomerDto;
@@ -23,6 +25,8 @@ public interface CustomerService {
 
 	public ResponseEntity<?> forgetPassword(ForgetPassword dto);
 
-	public ResponseEntity<?> assignRoleToUser(int id, String roleName);
+	public ResponseEntity<?> assignRoleToUser(String username, String roleName);
+
+	public List<String> getAllUsername();
 
 }

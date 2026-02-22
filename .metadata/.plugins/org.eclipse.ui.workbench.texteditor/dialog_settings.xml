@@ -12,6 +12,7 @@
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="package com.ltifinance.loanapp.adminservice.repository;"/>
 			<item value="save"/>
 		</list>
 		<list key="replacehistory">

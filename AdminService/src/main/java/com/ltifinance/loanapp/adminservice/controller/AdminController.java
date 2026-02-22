@@ -31,8 +31,8 @@ public class AdminController {
 	}
 
 	@GetMapping(value = "/api/admincontroller/findall")
-	public List<Role> FindAll(@RequestBody Role role) {
-		return service.findAll(role);
+	public List<String> FindAll() {
+		return service.findAll();
 	}
 
 	@PutMapping(value = "/api/admincontroller/updateRole/{rolename}")

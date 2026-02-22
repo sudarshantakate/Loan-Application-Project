@@ -1,6 +1,8 @@
 package com.ltifinance.loanapp.adminservice.service;
 
 import java.util.List;
+import java.util.stream.Collectors;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -20,9 +22,9 @@ public class AdminServiceImpl implements AdminService {
 	}
 
 	@Override
-	public List<Role> findAll(Role role) {
+	public List<String> findAll() {
 
-		return repo.findAll();
+		return repo.findAll().stream().map(Role::getRoleName).collect(Collectors.toList());
 	}
 
 	@Override
@@ -39,7 +41,7 @@ public class AdminServiceImpl implements AdminService {
 	@Override
 	public ResponseEntity<?> deleterole(String roleName) {
 		Role existingRole = repo.findByRoleName(roleName);
-		if(existingRole==null) {
+		if (existingRole == null) {
 			return new ResponseEntity<>("Role not found", HttpStatus.OK);
 		}
 		repo.delete(existingRole);

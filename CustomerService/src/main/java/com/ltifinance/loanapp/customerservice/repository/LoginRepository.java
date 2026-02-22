@@ -1,12 +1,19 @@
 package com.ltifinance.loanapp.customerservice.repository;
 
-import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
+import java.util.List;
 
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.stereotype.Repository;
 import com.ltifinance.loanapp.customerservice.entity.LogIn;
 
 @Repository
 public interface LoginRepository extends JpaRepository<LogIn, Integer> {
 
 	LogIn findById(int id);
+
+	LogIn findByUsername(String username);
+
+	@Query(value = "select username from log_in", nativeQuery = true)
+	List<String> findByAllUsername();
 }

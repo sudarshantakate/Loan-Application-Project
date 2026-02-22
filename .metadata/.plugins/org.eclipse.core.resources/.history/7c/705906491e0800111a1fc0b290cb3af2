@@ -1,9 +1,0 @@
-package com.ltifinance.loanapp.customerservice.dto;
-
-public class LogInDto {
-	private int id;
-
-	private String username;
-
-	private String email;
-}

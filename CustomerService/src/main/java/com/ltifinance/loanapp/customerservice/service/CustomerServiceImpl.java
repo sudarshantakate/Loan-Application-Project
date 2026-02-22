@@ -1,24 +1,26 @@
 package com.ltifinance.loanapp.customerservice.service;
 
 import java.text.SimpleDateFormat;
-import java.util.Date;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.kafka.KafkaProperties.Admin;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
+import java.util.*;
 
+import com.ltifinance.loanapp.customerservice.client.RoleClientService;
 import com.ltifinance.loanapp.customerservice.constant.EnumData;
 import com.ltifinance.loanapp.customerservice.dto.CustomerDto;
 import com.ltifinance.loanapp.customerservice.dto.ForgetPassword;
-import com.ltifinance.loanapp.customerservice.dto.LogInDto;
 import com.ltifinance.loanapp.customerservice.dto.Role;
 import com.ltifinance.loanapp.customerservice.entity.Customer;
 import com.ltifinance.loanapp.customerservice.entity.LogIn;
+import com.ltifinance.loanapp.customerservice.exception.ResourceNotFoundException;
 import com.ltifinance.loanapp.customerservice.repository.CustomerRepository;
 import com.ltifinance.loanapp.customerservice.repository.LoginRepository;
 import com.ltifinance.loanapp.customerservice.response.CustomerResponse;
@@ -35,8 +37,11 @@ public class CustomerServiceImpl implements CustomerService {
 	@Autowired
 	private ModelMapper modelMapper;
 
+//	@Autowired
+//	private RestTemplate restTemplate;
+
 	@Autowired
-	private RestTemplate restTemplate;
+	private RoleClientService roleClientService;
 
 	private static final Logger logger = LogManager.getLogger(CustomerServiceImpl.class);
 
@@ -178,7 +183,7 @@ public class CustomerServiceImpl implements CustomerService {
 			} else {
 				CustomerResponse response = new CustomerResponse();
 				response.setUsername(email);
-				response.setMessage("Customer Status is already NonActive. Cannot proceed.");
+				response.setMessage("Customer Status is already NonActive Cannot proceed.");
 				return new ResponseEntity<CustomerResponse>(response, HttpStatus.OK);
 			}
 		}
@@ -215,18 +220,25 @@ public class CustomerServiceImpl implements CustomerService {
 	}
 
 	@Override
-	public ResponseEntity<?> assignRoleToUser(int id, String roleName) {
-		LogIn login = loginrepo.findById(id);
+	public ResponseEntity<?> assignRoleToUser(String username, String roleName) {
+		LogIn login = loginrepo.findByUsername(username);
 		if (login == null) {
-			return new ResponseEntity<>("User Not Exist!!", HttpStatus.OK);
+			return new ResponseEntity<>("User Not Exist!!", HttpStatus.NOT_FOUND);
 		}
-		String url = "http://localhost:3002/api/admincontroller/getrole/" + roleName;
-		Role role = restTemplate.getForObject(url, Role.class);
+		//String url = "http://localhost:3002/api/admincontroller/getrole/" + roleName;
+		//Role role = restTemplate.getForObject(url, Role.class);
+		Role role = roleClientService.getRoleName(roleName);
 		if (role == null) {
-			return new ResponseEntity<>("ROLE NOT FOUND!!", HttpStatus.OK);
+		    throw new ResourceNotFoundException("Role not found with name: " + roleName);
 		}
 		login.setRoleName(role.getRoleName());
 		loginrepo.save(login);
 		return new ResponseEntity<>(login, HttpStatus.OK);
+	}
+
+	@Override
+	public List<String> getAllUsername() {
+		List<String> username = loginrepo.findByAllUsername();
+		return username;
 	}
 }

@@ -10,7 +10,7 @@ public interface AdminService {
 
 	public Role createRole(Role role);
 
-	public List<Role> findAll(Role role);
+	public List<String> findAll();
 
 	public ResponseEntity<?> updateRole(String roleName, Role role);
 
