@@ -11,7 +11,7 @@
 	<groupId>com</groupId>
 	<artifactId>notificationService</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>notificationService</name>
+	<name>NotificationService</name>
 	<description>Notification Service</description>
 	<url/>
 	<licenses>

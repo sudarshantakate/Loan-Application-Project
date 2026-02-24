@@ -221,16 +221,12 @@ public class CustomerServiceImpl implements CustomerService {
 
 	@Override
 	public ResponseEntity<?> assignRoleToUser(String username, String roleName) {
-		LogIn login = loginrepo.findByUsername(username);
-		if (login == null) {
-			return new ResponseEntity<>("User Not Exist!!", HttpStatus.NOT_FOUND);
-		}
-		//String url = "http://localhost:3002/api/admincontroller/getrole/" + roleName;
-		//Role role = restTemplate.getForObject(url, Role.class);
-		Role role = roleClientService.getRoleName(roleName);
-		if (role == null) {
-		    throw new ResourceNotFoundException("Role not found with name: " + roleName);
-		}
+		LogIn login = loginrepo.findByUsername(username)
+				.orElseThrow(() -> new ResourceNotFoundException("User not found!!"));
+		// String url = "http://localhost:3002/api/admincontroller/getrole/" + roleName;
+		// Role role = restTemplate.getForObject(url, Role.class);
+		Role role = Optional.ofNullable(roleClientService.getRoleName(roleName))
+				.orElseThrow(() -> new ResourceNotFoundException("Role Not found!!"));
 		login.setRoleName(role.getRoleName());
 		loginrepo.save(login);
 		return new ResponseEntity<>(login, HttpStatus.OK);
