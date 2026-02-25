@@ -8,6 +8,7 @@ import com.ltifinance.loanapp.customerservice.dto.CustomerDto;
 import com.ltifinance.loanapp.customerservice.dto.ForgetPassword;
 import com.ltifinance.loanapp.customerservice.entity.Customer;
 import com.ltifinance.loanapp.customerservice.response.CustomerResponse;
+import com.ltifinance.loanapp.customerservice.response.PageResponse;
 
 public interface CustomerService {
 
@@ -28,5 +29,7 @@ public interface CustomerService {
 	public ResponseEntity<?> assignRoleToUser(String username, String roleName);
 
 	public List<String> getAllUsername();
+	
+	PageResponse<CustomerDto> getCustomers(int page, int size);
 
 }

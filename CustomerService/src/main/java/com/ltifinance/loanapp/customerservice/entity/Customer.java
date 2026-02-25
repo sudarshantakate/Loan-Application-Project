@@ -11,6 +11,8 @@ import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.ltifinance.loanapp.customerservice.dto.CustomerDto;
+import com.ltifinance.loanapp.customerservice.dto.LogInDto;
+
 import lombok.Data;
 
 @Entity
@@ -30,7 +32,7 @@ public class Customer {
 	@Column(nullable = false)
 	private String address;
 
-	@Column(nullable = false,unique = true)
+	@Column(nullable = false, unique = true)
 	private String username;
 
 	@Column(nullable = false)

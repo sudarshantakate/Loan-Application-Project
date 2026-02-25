@@ -1,22 +1,23 @@
 package com.ltifinance.loanapp.customerservice.service;
 
 import java.text.SimpleDateFormat;
-
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.kafka.KafkaProperties.Admin;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
-import org.springframework.web.client.RestTemplate;
 import java.util.*;
 
 import com.ltifinance.loanapp.customerservice.client.RoleClientService;
 import com.ltifinance.loanapp.customerservice.constant.EnumData;
 import com.ltifinance.loanapp.customerservice.dto.CustomerDto;
 import com.ltifinance.loanapp.customerservice.dto.ForgetPassword;
+import com.ltifinance.loanapp.customerservice.dto.LogInDto;
 import com.ltifinance.loanapp.customerservice.dto.Role;
 import com.ltifinance.loanapp.customerservice.entity.Customer;
 import com.ltifinance.loanapp.customerservice.entity.LogIn;
@@ -24,6 +25,7 @@ import com.ltifinance.loanapp.customerservice.exception.ResourceNotFoundExceptio
 import com.ltifinance.loanapp.customerservice.repository.CustomerRepository;
 import com.ltifinance.loanapp.customerservice.repository.LoginRepository;
 import com.ltifinance.loanapp.customerservice.response.CustomerResponse;
+import com.ltifinance.loanapp.customerservice.response.PageResponse;
 
 @Service
 public class CustomerServiceImpl implements CustomerService {
@@ -236,5 +238,29 @@ public class CustomerServiceImpl implements CustomerService {
 	public List<String> getAllUsername() {
 		List<String> username = loginrepo.findByAllUsername();
 		return username;
+	}
+
+	@Override
+	public PageResponse<CustomerDto> getCustomers(int page, int size) {
+		CustomerDto customerdto = new CustomerDto();
+		Pageable pageable = PageRequest.of(page, size);
+		Page<Customer> customerPage = customerrepository.findAll(pageable);
+		List<Customer> customerList = customerPage.getContent();
+
+		List<CustomerDto> dtoList = new ArrayList<CustomerDto>();
+		for (int i = 0; i < customerList.size(); i++) {
+			Customer customer = customerList.get(i);
+			CustomerDto dto = customerdto.convertCustomerToCustomerDto(customer);
+			dtoList.add(dto);
+		}
+		PageResponse<CustomerDto> response = new PageResponse<CustomerDto>();
+		response.setContent(dtoList);
+		response.setPageNumber(customerPage.getNumber());
+		response.setPageSize(customerPage.getSize());
+		response.setTotalElements(customerPage.getTotalElements());
+		response.setTotalPages(customerPage.getTotalPages());
+		response.setLast(customerPage.isLast());
+
+		return response;
 	}
 }
