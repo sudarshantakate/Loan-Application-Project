@@ -4,14 +4,18 @@ import java.time.LocalDate;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+import com.ltifinance.loanapp.loanservice.constant.EnumData;
+
 import lombok.Data;
 
 @Data
-@Entity
+@Entity(name = "Loan")
 public class Loan {
 
 	@Id
@@ -27,9 +31,10 @@ public class Loan {
 	private Double emiAmount;
 
 	private String loanType;
-
+	
+//	@Enumerated(EnumType.STRING)
 	private String status;
-
+	
 	private LocalDate applicationDate;
 
 	private LocalDate approvedDate;
