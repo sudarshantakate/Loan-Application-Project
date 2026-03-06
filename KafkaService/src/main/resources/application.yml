@@ -1,0 +1,19 @@
+server:
+  port: 3005
+spring:
+  application:
+    name: KafkaService
+  kafka:
+    consumer:
+      auto-offset-reset: earliest
+      group-id: sudarshan-group
+    streams:
+      bootstrap-servers: localhost:9092
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+      
