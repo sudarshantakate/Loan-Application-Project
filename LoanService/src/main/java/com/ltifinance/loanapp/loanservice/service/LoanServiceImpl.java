@@ -12,6 +12,7 @@ import org.springframework.stereotype.Service;
 import com.ltifinance.loanapp.loanservice.constant.EnumData;
 import com.ltifinance.loanapp.loanservice.dto.LoanDTO;
 import com.ltifinance.loanapp.loanservice.entity.Loan;
+import com.ltifinance.loanapp.loanservice.entity.LoanEvent;
 import com.ltifinance.loanapp.loanservice.repository.LoanRepository;
 
 @Service
@@ -78,7 +79,13 @@ public class LoanServiceImpl implements LoanService {
 		}
 		loan.setStatus(EnumData.APPROVED.getValue());
 		loan.setApprovedDate(LocalDate.now());
-		loanRepository.save(loan);
+		Loan savedLoan = loanRepository.save(loan);
+		LoanEvent event= new LoanEvent(
+				savedLoan.getLoanId(), 
+				savedLoan.getCustomerId(),
+				savedLoan.getLoanAmount() ,
+				"APPROVED");
+		
 		return new ResponseEntity("Loan approved successfully", HttpStatus.OK);
 	}
 
