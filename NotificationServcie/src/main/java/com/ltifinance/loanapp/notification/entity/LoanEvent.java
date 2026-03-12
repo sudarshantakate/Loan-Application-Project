@@ -1,4 +1,4 @@
-package com.ltifinance.loanapp.loanservice.entity;
+package com.ltifinance.loanapp.notification.entity;
 
 public class LoanEvent {
 
@@ -14,8 +14,6 @@ public class LoanEvent {
 		this.amount = amount;
 		this.status = status;
 	}
-	
-	public LoanEvent() {	}
 
 	public Long getLoanId() {
 		return loanId;
