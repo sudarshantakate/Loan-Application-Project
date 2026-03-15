@@ -15,7 +15,6 @@ public class LoanEvent {
 		this.status = status;
 	}
 	
-	public LoanEvent() {	}
 
 	public Long getLoanId() {
 		return loanId;
