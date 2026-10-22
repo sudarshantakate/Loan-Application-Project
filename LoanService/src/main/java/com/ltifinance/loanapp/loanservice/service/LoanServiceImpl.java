@@ -2,8 +2,8 @@ package com.ltifinance.loanapp.loanservice.service;
 
 import java.time.LocalDate;
 import java.util.List;
-import java.util.Optional;
 
+import com.ltifinance.loanapp.loanservice.exceptionHandling.resourceNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -91,14 +91,14 @@ public class LoanServiceImpl implements LoanService {
 
 	@Override
 	public ResponseEntity<String> getLoanStatus(Long loanId) {
-		Loan loan = loanRepository.findById(loanId).orElseThrow(() -> new RuntimeException("Loan not found"));
+		Loan loan = loanRepository.findById(loanId).orElseThrow(() -> new resourceNotFoundException("Loan not found"));
 		EnumData status = EnumData.fromValue(loan.getStatus());
 		return ResponseEntity.ok(status.name());
 	}
 
 	@Override
 	public ResponseEntity<String> rejectLoan(Long loanId) {
-		Loan loan = loanRepository.findById(loanId).orElseThrow(() -> new RuntimeException("Loan not found"));
+		Loan loan = loanRepository.findById(loanId).orElseThrow(() -> new resourceNotFoundException("Loan not found"));
 
 		// If already rejected
 		if (loan.getStatus().equals(EnumData.REJECTED.getValue())) {
